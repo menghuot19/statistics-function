@@ -50,6 +50,21 @@ def staster(ls=[]):
                   + '\nSample Standard Deviation: ' + str(s.std()) + '\nSample Variance: ' + str(s.var())
    return staText
 
+# Math: \sigma=\sqrt{\frac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}}
+def findCalculation(x:list)->float:
+    N:int=len(x)
+    #find mu
+    mu:float=0.0
+    for i in x:
+        mu=mu+float(i)
+    mu=mu/N
+
+    su:float=0.0
+    for i in x:
+        su=su+math.pow(float(i)-mu,2)
+    su=math.sqrt(su/N)
+
+    return round(su,4)
 
 def drawSolution(mdict: dict = {},outpath: str = ''):
 
