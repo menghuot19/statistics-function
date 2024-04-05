@@ -279,6 +279,4 @@ def manualSolution(arrV:dict,secretKey,numberOfClass=0)->dict:
     plt.savefig(f"3_Ogive01_{secretKey}.png")
     plt.close()
     buildPolygon(arrV,c1,f"2_PolyganHistogram_{secretKey}.png")
-
-    return tb
-    # return retriveDict
+    return retriveDict
